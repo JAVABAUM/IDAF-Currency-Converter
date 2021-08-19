@@ -9,10 +9,5 @@ function convertCurrency(from, to, amount) {
   var url =
     baseUrl + "api/v7/convert?q=" + query + "&compact=ultra&apiKey=" + apiKey;
 
-  $.ajax({
-    url: url,
-    context: document.body,
-  }).done(function () {
-      console.log("sucess");
-  });
+    return true;
 }
