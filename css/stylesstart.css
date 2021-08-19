@@ -39,7 +39,7 @@ a {
   text-transform: uppercase;
   text-align: center;
   color: var(--color-white);
-  trasnition: var(--speed-normal);
+  transition: var(--speed-normal);
   border: 1px solid var(--color-red);
 }
 a:hover {
