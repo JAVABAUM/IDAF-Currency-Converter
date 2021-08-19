@@ -1,0 +1,11 @@
+For this project we have used code or similar things from following websites:
+
+HTML and CSS for the Button on the start.html page:
+https://codepen.io/martinboykov/pen/jOrEWBr
+
+Data from API:
+https://freecurrencyapi.net/
+
+JavaScript Day / Month / Year Date:
+https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
+
