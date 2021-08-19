@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 body {
-    background-color: black;
+    background-color: #111111;
     text-align: center;
     
 }
@@ -13,4 +14,30 @@ h1{
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    color: white;
   }
+
+  select {
+    align-content: center;
+    width: 20%;
+    padding: 10px 15px;
+    border: 2px white;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+ }
+
+ input {
+    align-content: center;
+    width: 20%;
+    padding: 10px 15px;
+    border: 2px white;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+ }
+
+  #title{
+      padding-top: 10%;
+  }
+  

@@ -2,33 +2,52 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mainpage</title>
-    <link rel="stylesheet" href="../css/stylesmainpage.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="../js/index.js"></script>
-    <script src="../js/api.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mainpage</title>
+  <link rel="stylesheet" href="../css/stylesmainpage.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/api.js"></script>
 </head>
 
 <body>
-    <h1>This is the mainpage where the calculator is.</h1>
-    <form action="">
-        <label for="cars">Choose a currency</label>
-        <select name="currencies" id="currency">
-          <option value="CHF">CHF</option>
-          <option value="EUR">EUR</option>
-          <option value="USD">USD</option>
-          <option value="GBP">GBP</option>
-        </select>
-        <br><br>
-        
 
-        
-        <input type="submit" value="Submit">
-      </form>
+  <h1 id="title">This is the mainpage where the calculator is.</h1>
+  <br>
+  <form action="">
+
+    <select name="currencies" id="currency">
+      <option value="CHF">CHF</option>
+      <option value="EUR">EUR</option>
+      <option value="USD">USD</option>
+      <option value="GBP">GBP</option>
+    </select>
+    <input type="number" min="1" step="0.1" />
+
+    <h2>to</h2>
+
+
+    <form action="">
+
+      <select name="currencies" id="currency">
+        <option value="CHF">CHF</option>
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+      </select>
+
+      <input type="number" min="1" step="0.1" />
+      <br>
+      <br>
+
+
+
+      <input type="submit" value="Convert">
+      <!-- The plan is directly when you type in the numbers it converts automatically -->
+    </form>
 
 </body>
 
