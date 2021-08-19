@@ -1,5 +1,7 @@
 # IDAF-Currency-Converter
  IDAF Kurzprojekt
+ 
+ In diesem Projekt geht es um einen Währungsrechner der eine Währung in eine andere umwandelt. Zb. von CHF in EUR.
 
  von Florian, Gergö, Alessandro und Simon
                                                              
