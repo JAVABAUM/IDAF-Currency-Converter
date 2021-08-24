@@ -9,7 +9,6 @@ function convertCurrency(from, to, amount) {
   request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
       var data = JSON.parse(this.response);
-      // console.log(data.data["2021-08-18"][to]);
       var date = dateString();
       var result = calculateAmount(amount, data.data[date][to]);
       result = result.toFixed(4);
