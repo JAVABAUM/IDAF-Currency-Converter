@@ -9,3 +9,6 @@
  https://github.com/geri666                               
  https://github.com/FlyLikeAle                               
  https://github.com/slaxeea                               
+
+
+Verwendete Resourcen für Code sind im file 'sources.txt' zu finden!
