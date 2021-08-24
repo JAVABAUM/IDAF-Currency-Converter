@@ -17,37 +17,53 @@
 
   <h1 id="title">This is the mainpage where the calculator is.</h1>
   <br>
-  <form action="">
+  <form>
 
-    <select name="currencies" id="currency">
+    <select name="currencies" id="fromcurrency">
       <option value="CHF">CHF</option>
       <option value="EUR">EUR</option>
       <option value="USD">USD</option>
       <option value="GBP">GBP</option>
     </select>
-    <input type="number" min="0.01" step="0.01" />
+
+    <input type="number" min="0.01" step="0.01" id="amount" />
 
     <h2>to</h2>
 
 
-    <form action="">
+    <select name="currencies" id="tocurrency">
+      <option value="CHF">CHF</option>
+      <option value="EUR">EUR</option>
+      <option value="USD">USD</option>
+      <option value="GBP">GBP</option>
+    </select>
 
-      <select name="currencies" id="currency">
-        <option value="CHF">CHF</option>
-        <option value="EUR">EUR</option>
-        <option value="USD">USD</option>
-        <option value="GBP">GBP</option>
-      </select>
+    <br>
+    <br>
+    <h2 id="result">is</h2>
+    <!-- The plan is directly when you type in the numbers it converts automatically -->
+  </form>
 
-      <input type="number" min="0.01" step="0.01" />
-      <br>
-      <br>
+  <button id="submitButton">Calculate</button>
 
+  <script>
+    $('#submitButton').click(function () {
+      var amount = $("#amount").val();
+      var fromcurrency = $("#fromcurrency").val();
+      var tocurrency = $("#tocurrency").val();
 
+      if (amount == "" || fromcurrency=="" || tocurrency == "") {
+        console.log("Please enter something");
+      }
+      else{
+        console.log("from " + fromcurrency + " to "+ tocurrency+ "  amount: "+amount);
+        var result = convertCurrency(fromcurrency, tocurrency, amount);
+      } 
+    });
 
-      <input type="submit" value="Convert">
-      <!-- The plan is directly when you type in the numbers it converts automatically -->
-    </form>
+    $(document).ready(function () {
+    })
+  </script>
 
 </body>
 

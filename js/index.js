@@ -11,7 +11,12 @@ function convertCurrency(from, to, amount) {
       var data = JSON.parse(this.response);
       // console.log(data.data["2021-08-18"][to]);
       var date = dateString();
-      console.log(calculateAmount(amount, data.data[date][to]));
+      var result = calculateAmount(amount, data.data[date][to]);
+      console.log(result);
+      
+      $("#result").text("is "+result + " "+to);
+
+      return result;
     } else {
       console.error("Something went wrong. status:  " + request.status);
     }
