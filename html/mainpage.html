@@ -57,7 +57,7 @@
 
     </select>
 
-    <input type="number" min="0.01" step="0.01" id="amount" />
+    <input type="number" min="0.01" step="0.01" id="amount" onkeyup="autocalc" />
 
     <h2>to</h2>
 
@@ -124,6 +124,23 @@
         var result = convertCurrency(fromcurrency, tocurrency, amount);
       }
     });
+
+    const input = document.querySelector('input');
+    input.addEventListener('input', updateValue);
+
+    function updateValue(e) {
+      var amount = $("#amount").val();
+      var fromcurrency = $("#fromcurrency").val();
+      var tocurrency = $("#tocurrency").val();
+
+      if (amount == "" || fromcurrency == "" || tocurrency == "" || tocurrency == fromcurrency) {
+        $("#errors").text("Please enter correct data");
+      }
+      else {
+        console.log("from " + fromcurrency + " to " + tocurrency + "  amount: " + amount);
+        var result = convertCurrency(fromcurrency, tocurrency, amount);
+      }
+    }
 
     $(document).ready(function () {
     })
