@@ -11,3 +11,7 @@ https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-jav
 
 Button on start.html:
 https://codepen.io/martinboykov/pen/jOrEWBr
+
+Image used for the logo:
+https://commons.wikimedia.org/wiki/File:Peepal_Tree_Logo.png
+
