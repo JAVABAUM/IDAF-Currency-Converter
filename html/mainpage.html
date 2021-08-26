@@ -116,7 +116,7 @@
       var fromcurrency = $("#fromcurrency").val();
       var tocurrency = $("#tocurrency").val();
 
-      if (amount == "" || fromcurrency == "" || tocurrency == "") {
+      if (amount == "" || fromcurrency == "" || tocurrency == "" || tocurrency == fromcurrency) {
         $("#errors").text("Please enter correct data");
       }
       else {
