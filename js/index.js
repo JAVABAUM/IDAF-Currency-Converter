@@ -33,7 +33,7 @@ function dateString() {
   var date = new Date();
 
   var day = String(date.getDate()-1).padStart(2, "0");
-  var month = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var month = String(date.getMonth() + 1).padStart(2, "0"); 
   var year = date.getFullYear();
 
   var today = year + "-" + month + "-" + day;
