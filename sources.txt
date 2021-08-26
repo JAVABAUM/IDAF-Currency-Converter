@@ -15,3 +15,5 @@ https://codepen.io/martinboykov/pen/jOrEWBr
 Image used for the logo:
 https://commons.wikimedia.org/wiki/File:Peepal_Tree_Logo.png
 
+Footer template:
+https://codepen.io/scanfcode/pen/MEZPNd
