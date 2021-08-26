@@ -10,10 +10,12 @@ function convertCurrency(from, to, amount) {
       var data = JSON.parse(this.response);
       var date = dateString();
       var result = calculateAmount(amount, data.data[date][to]);
+      var resultchf = calculateAmount(amount, data.data[date]["CHF"]);
       result = result.toFixed(4);
-      console.log(result);
+      resultchf = resultchf.toFixed(4);
+      // console.log(result);
       
-      $("#result").text("is "+result + " "+to);
+      $("#result").text(amount+" "+ from + " are "+result + " "+to + " and "+resultchf + " CHF");
 
       return result;
     } else {
