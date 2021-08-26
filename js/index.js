@@ -13,7 +13,6 @@ function convertCurrency(from, to, amount) {
       var resultchf = calculateAmount(amount, data.data[date]["CHF"]);
       result = result.toFixed(4);
       resultchf = resultchf.toFixed(4);
-      // console.log(result);
       
       $("#result").text(amount+" "+ from + " are "+result + " "+to + " and "+resultchf + " CHF");
       $("#errors").text("");
