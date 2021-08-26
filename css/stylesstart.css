@@ -84,8 +84,8 @@ h1 {
 #javaBaum{
   
   position: absolute;
-  top: 22.5%;
-  left: 40%;
+  top: 5%;
+  left: auto;
   z-index: -1;
-  opacity: 0.4;
+  
 }
