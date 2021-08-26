@@ -1,9 +1,7 @@
 function convertCurrency(from, to, amount) {
   var localStoragedata = localStorage.getItem(from);
-  console.log(localStoragedata);
   if (localStoragedata == null) {
     var apiKey = getApi();  
-
     var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=${from}&apikey=${apiKey}`;
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
@@ -83,3 +81,4 @@ function dateString() {
 function serverUnavailable() {
   window.location.replace("service-unavailable.html");
 }
+
