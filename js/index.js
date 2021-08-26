@@ -16,7 +16,7 @@ function convertCurrency(from, to, amount) {
       // console.log(result);
       
       $("#result").text(amount+" "+ from + " are "+result + " "+to + " and "+resultchf + " CHF");
-
+      $("#errors").text("");
       return result;
     } else {
       console.error("Something went wrong. status:  " + request.status);
