@@ -19,7 +19,7 @@
     <br>
     <form>
 
-      <select name="currencies" onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;'
+      <select class="input" name="currencies" onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;'
         onblur="this.size=0;" id="fromcurrency">
         <option value="AUD">AUD</option>
         <option value="BGN">BGN</option>
@@ -57,12 +57,12 @@
 
       </select>
 
-      <input type="number" min="0.01" step="0.01" id="amount" />
+      <input type="number" min="0.01" step="0.01" id="amount" class="input"/>
 
       <h2>to</h2>
 
 
-      <select name="currencies" onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;'
+      <select class="input" name="currencies" onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;'
         onblur="this.size=0;" id="tocurrency">
         <option value="AUD">AUD</option>
         <option value="BGN">BGN</option>
