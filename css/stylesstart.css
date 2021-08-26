@@ -80,3 +80,12 @@ h1 {
     color: white;
     font-size: 65px;
 }
+
+#javaBaum{
+  
+  position: absolute;
+  top: 22.5%;
+  left: 40%;
+  z-index: -1;
+  opacity: 0.4;
+}
