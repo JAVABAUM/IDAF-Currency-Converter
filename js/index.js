@@ -1,8 +1,7 @@
 function convertCurrency(from, to, amount) {
   var apiKey = getApi();
 
-  // var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=${from}&apikey=${apiKey}`;
-  var url = "aaaa"
+  var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=${from}&apikey=${apiKey}`;
   var request = new XMLHttpRequest();
   request.open("GET", url, true);
 
