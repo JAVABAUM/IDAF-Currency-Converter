@@ -19,7 +19,8 @@
   <br>
   <form>
 
-    <select name="currencies" onmousedown="if(this.options.length>5){this.size=5;}"  onchange='this.size=0;' onblur="this.size=0;" id="tocurrency" id="fromcurrency">
+    <select name="currencies" onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;'
+      onblur="this.size=0;" id="fromcurrency">
       <option value="AUD">AUD</option>
       <option value="BGN">BGN</option>
       <option value="BRL">BRL</option>
@@ -61,7 +62,8 @@
     <h2>to</h2>
 
 
-    <select name="currencies" onmousedown="if(this.options.length>5){this.size=5;}"  onchange='this.size=0;' onblur="this.size=0;" id="tocurrency">
+    <select name="currencies" onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;'
+      onblur="this.size=0;" id="tocurrency">
       <option value="AUD">AUD</option>
       <option value="BGN">BGN</option>
       <option value="BRL">BRL</option>
@@ -114,13 +116,13 @@
       var fromcurrency = $("#fromcurrency").val();
       var tocurrency = $("#tocurrency").val();
 
-      if (amount == "" || fromcurrency=="" || tocurrency == "") {
+      if (amount == "" || fromcurrency == "" || tocurrency == "") {
         $("#errors").text("Please enter correct data");
       }
-      else{
-        console.log("from " + fromcurrency + " to "+ tocurrency+ "  amount: "+amount);
+      else {
+        console.log("from " + fromcurrency + " to " + tocurrency + "  amount: " + amount);
         var result = convertCurrency(fromcurrency, tocurrency, amount);
-      } 
+      }
     });
 
     $(document).ready(function () {
@@ -134,7 +136,8 @@
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <h6>About</h6>
-        <p class="text-justify">With our currency converter you can easily convert amounts between many different currencies. <br>
+        <p class="text-justify">With our currency converter you can easily convert amounts between many different
+          currencies. <br>
           The four of us wrote this little web application as a pre-project for our IDPA. ??? hey guys lol it's me
         </p>
       </div>
@@ -181,7 +184,7 @@
         </p>
       </div>
 
-<!--
+      <!--
 
       <div class="col-md-4 col-sm-6 col-xs-12">
         <ul class="social-icons">
@@ -194,7 +197,8 @@
   
 
 -->
-  </div>
+    </div>
   </div>
 </footer>
+
 </html>
