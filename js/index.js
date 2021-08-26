@@ -1,29 +1,67 @@
 function convertCurrency(from, to, amount) {
-  var apiKey = getApi();
+  var localStoragedata = localStorage.getItem(from);
+  console.log(localStoragedata);
+  if (localStoragedata == null) {
+    var apiKey = getApi();  
 
-  var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=${from}&apikey=${apiKey}`;
-  var request = new XMLHttpRequest();
-  request.open("GET", url, true);
+    var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=${from}&apikey=${apiKey}`;
+    var request = new XMLHttpRequest();
+    request.open("GET", url, true);
 
-  request.onload = function () {
-    if (request.status >= 200 && request.status < 400) {
-      var data = JSON.parse(this.response);
-      var date = dateString();
-      var result = calculateAmount(amount, data.data[date][to]);
-      var resultchf = calculateAmount(amount, data.data[date]["CHF"]);
-      result = result.toFixed(4);
-      resultchf = resultchf.toFixed(4);
-      
-      $("#result").text(amount+" "+ from + " are "+result + " "+to + " and "+resultchf + " CHF");
-      $("#errors").text("");
-      return result;
-    } else {
-      console.error("Something went wrong. status:  " + request.status);
-      serverUnavailable();
-    }
-  };
+    request.onload = function () {
+      if (request.status >= 200 && request.status < 400) {
+        var data = JSON.parse(this.response);
+        var date = dateString();
+        var result = calculateAmount(amount, data.data[date][to]);
+        var resultchf = calculateAmount(amount, data.data[date]["CHF"]);
+        result = result.toFixed(4);
+        resultchf = resultchf.toFixed(4);
+        localStorage.setItem(from, JSON.stringify(data.data));
 
-  request.send();
+        $("#result").text(
+          amount +
+            " " +
+            from +
+            " are " +
+            result +
+            " " +
+            to +
+            " and " +
+            resultchf +
+            " CHF"
+        );
+        $("#errors").text("");
+        return result;
+      } else {
+        console.error("Something went wrong. status:  " + request.status);
+        serverUnavailable();
+      }
+    };
+
+    request.send();
+  } else {
+    var data = JSON.parse(localStoragedata);
+    var date = dateString();
+    var result = calculateAmount(amount, data[date][to]);
+    var resultchf = calculateAmount(amount, data[date]["CHF"]);
+    result = result.toFixed(4);
+    resultchf = resultchf.toFixed(4);
+
+    $("#result").text(
+      amount +
+        " " +
+        from +
+        " are " +
+        result +
+        " " +
+        to +
+        " and " +
+        resultchf +
+        " CHF"
+    );
+    $("#errors").text("");
+    return result;
+  }
 }
 
 function calculateAmount(amount, rate) {
@@ -33,15 +71,15 @@ function calculateAmount(amount, rate) {
 function dateString() {
   var date = new Date();
 
-  var day = String(date.getDate()-1).padStart(2, "0");
-  var month = String(date.getMonth() + 1).padStart(2, "0"); 
+  var day = String(date.getDate() - 1).padStart(2, "0");
+  var month = String(date.getMonth() + 1).padStart(2, "0");
   var year = date.getFullYear();
 
   var today = year + "-" + month + "-" + day;
-   
+
   return today;
 }
 
-function serverUnavailable(){
+function serverUnavailable() {
   window.location.replace("service-unavailable.html");
 }
