@@ -1,8 +1,8 @@
 function convertCurrency(from, to, amount) {
   var apiKey = getApi();
 
-  var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=${from}&apikey=${apiKey}`;
-
+  // var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=${from}&apikey=${apiKey}`;
+  var url = "aaaa"
   var request = new XMLHttpRequest();
   request.open("GET", url, true);
 
@@ -19,6 +19,7 @@ function convertCurrency(from, to, amount) {
       return result;
     } else {
       console.error("Something went wrong. status:  " + request.status);
+      serverUnavailable();
     }
   };
 
@@ -39,4 +40,8 @@ function dateString() {
   var today = year + "-" + month + "-" + day;
    
   return today;
+}
+
+function serverUnavailable(){
+  window.location.replace("service-unavailable.html");
 }
