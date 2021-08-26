@@ -105,6 +105,9 @@
   <br>
   <button id="submitButton">Calculate</button>
 
+  <br>
+  <h2 class="errors" id="errors"></h2>
+
   <script>
     $('#submitButton').click(function () {
       var amount = $("#amount").val();
@@ -112,7 +115,7 @@
       var tocurrency = $("#tocurrency").val();
 
       if (amount == "" || fromcurrency=="" || tocurrency == "") {
-        console.log("Please enter something");
+        $("#errors").text("Please enter correct data");
       }
       else{
         console.log("from " + fromcurrency + " to "+ tocurrency+ "  amount: "+amount);
