@@ -11,4 +11,4 @@
  https://github.com/slaxeea                               
 
 
-Verwendete Resourcen für Code sind im file 'sources.txt' zu finden!
+Verwendete Resourcen für Code sind im file `sources.txt` zu finden!
