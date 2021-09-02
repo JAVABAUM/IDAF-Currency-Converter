@@ -86,7 +86,7 @@ function calculateAmount(amount, rate) {
 function dateString() {
   var date = new Date();
 
-  var day = String(date.getDate() - 1).padStart(2, "0");
+  var day = String(date.getDate() - 2).padStart(2, "0");
   var month = String(date.getMonth() + 1).padStart(2, "0");
   var year = date.getFullYear();
 
