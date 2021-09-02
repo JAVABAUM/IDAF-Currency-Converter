@@ -107,7 +107,8 @@
     <!--<button id="submitButton">Calculate</button>-->
 
     <br>
-    <h2 class="errors" id="errors"></h2>
+    <h2 class="errors" id="errors"></h2>    
+    <h2 class="result" id="rate"></h2>
   </div>
   <script>
     $('#submitButton').click(function () {
@@ -125,7 +126,6 @@
       if (amount == "" || fromcurrency == "" || tocurrency == "" || tocurrency == fromcurrency) {
         $("#errors").text("Please enter correct data");
       } else {
-        console.log("from " + fromcurrency + " to " + tocurrency + "  amount: " + amount);
         var result = convertCurrency(fromcurrency, tocurrency, amount);
       }
     }

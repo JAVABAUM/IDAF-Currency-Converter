@@ -1,7 +1,7 @@
 function convertCurrency(from, to, amount) {
   var localStoragedata = localStorage.getItem(from);
   if (localStoragedata == null) {
-    var apiKey = getApi();  
+    var apiKey = getApi();
     var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=${from}&apikey=${apiKey}`;
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
@@ -15,6 +15,7 @@ function convertCurrency(from, to, amount) {
         result = result.toFixed(4);
         resultchf = resultchf.toFixed(4);
         localStorage.setItem(from, JSON.stringify(data.data));
+        localStorage.setItem(from + "-rate", JSON.stringify(data.data[date]));
 
         $("#result").text(
           amount +
@@ -27,6 +28,14 @@ function convertCurrency(from, to, amount) {
             " and " +
             resultchf +
             " CHF"
+        );
+        $("#rate").text(
+          "The conversion rate between " +
+            from +
+            " and " +
+            to +
+            " is: " +
+            getRate(from, to)
         );
         $("#errors").text("");
         return result;
@@ -57,6 +66,14 @@ function convertCurrency(from, to, amount) {
         resultchf +
         " CHF"
     );
+    $("#rate").text(
+      "The conversion rate between " +
+        from +
+        " and " +
+        to +
+        " is: " +
+        getRate(from, to)
+    );
     $("#errors").text("");
     return result;
   }
@@ -82,3 +99,8 @@ function serverUnavailable() {
   window.location.replace("service-unavailable.html");
 }
 
+function getRate(from, to) {
+  data = localStorage.getItem(from + "-rate");
+  data = JSON.parse(data);
+  return data[to];
+}
