@@ -102,25 +102,16 @@
       <br>
       <br>
       <h2 id="result">is</h2>
-      <!-- The plan is directly when you type in the numbers it converts automatically -->
     </form>
     <br>
-    <button id="submitButton">Calculate</button>
+    <!--<button id="submitButton">Calculate</button>-->
 
     <br>
     <h2 class="errors" id="errors"></h2>
   </div>
   <script>
     $('#submitButton').click(function () {
-      var amount = $("#amount").val();
-      var fromcurrency = $("#fromcurrency").val();
-      var tocurrency = $("#tocurrency").val();
-
-      if (amount == "" || fromcurrency == "" || tocurrency == "" || tocurrency == fromcurrency) {
-        $("#errors").text("Please enter correct data");
-      } else {
-        var result = convertCurrency(fromcurrency, tocurrency, amount);
-      }
+      updateValue();
     });
 
     const input = document.querySelector('input');
