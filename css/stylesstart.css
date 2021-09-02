@@ -83,3 +83,11 @@ h1 {
 #emoji{ 
   font-size: 100px;
 }
+#javaBaum{
+
+  position: absolute;
+  top: 5%;
+  left: auto;
+  z-index: -1;
+
+}
