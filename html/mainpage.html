@@ -19,8 +19,9 @@
     <br>
     <form>
 
-      <select class="input" name="currencies" onchange="updateValue()" onmousedown="if(this.options.length>5){this.size=5;}"
-        onchange='this.size=0;' onblur="this.size=0;" id="fromcurrency">
+      <select class="input" name="currencies" onchange="updateValue()"
+        onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;' onblur="this.size=0;"
+        id="fromcurrency">
         <option value="AUD">AUD</option>
         <option value="BGN">BGN</option>
         <option value="BRL">BRL</option>
@@ -62,8 +63,9 @@
       <h2>to</h2>
 
 
-      <select class="input" name="currencies" onchange="updateValue()" onmousedown="if(this.options.length>5){this.size=5;}"
-        onchange='this.size=0;' onblur="this.size=0;" id="tocurrency">
+      <select class="input" name="currencies" onchange="updateValue()"
+        onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;' onblur="this.size=0;"
+        id="tocurrency">
         <option value="AUD">AUD</option>
         <option value="BGN">BGN</option>
         <option value="BRL">BRL</option>
@@ -101,14 +103,14 @@
 
       <br>
       <br>
+      <br>
       <h2 id="result">is</h2>
     </form>
     <br>
     <!--<button id="submitButton">Calculate</button>-->
 
-    <br>
     <h2 class="result" id="rate"></h2>
-    <h2 class="errors" id="errors"></h2>  
+    <h2 class="errors" id="errors"></h2>
   </div>
   <script>
     $('#submitButton').click(function () {

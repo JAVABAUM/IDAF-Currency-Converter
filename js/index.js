@@ -30,9 +30,9 @@ function convertCurrency(from, to, amount) {
             " CHF"
         );
         $("#rate").text(
-          "The conversion rate between " +
+          "The conversion rate from " +
             from +
-            " and " +
+            " to " +
             to +
             " is: " +
             getRate(from, to)
@@ -67,9 +67,9 @@ function convertCurrency(from, to, amount) {
         " CHF"
     );
     $("#rate").text(
-      "The conversion rate between " +
+      "The conversion rate from " +
         from +
-        " and " +
+        " to " +
         to +
         " is: " +
         getRate(from, to)
