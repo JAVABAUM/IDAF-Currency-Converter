@@ -119,7 +119,6 @@
       if (amount == "" || fromcurrency == "" || tocurrency == "" || tocurrency == fromcurrency) {
         $("#errors").text("Please enter correct data");
       } else {
-        console.log("from " + fromcurrency + " to " + tocurrency + "  amount: " + amount);
         var result = convertCurrency(fromcurrency, tocurrency, amount);
       }
     });
