@@ -216,8 +216,15 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: #7a18ec; 
 }
-#javaBaumMain{
-  margin-right: -1400px;
-  width:100px;
-  height: "100px"
+
+#javaBaumMain {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+
+.logo-container {
+  position: relative;
 }
