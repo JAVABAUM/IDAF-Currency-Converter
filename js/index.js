@@ -15,7 +15,6 @@ function convertCurrency(from, to, amount) {
         result = result.toFixed(4);
         resultchf = resultchf.toFixed(4);
         localStorage.setItem(from, JSON.stringify(data.data));
-        localStorage.setItem(from + "-rate", JSON.stringify(data.data[date]));
 
         $("#result").text(
           amount +
@@ -86,7 +85,7 @@ function calculateAmount(amount, rate) {
 function dateString() {
   var date = new Date();
 
-  var day = String(date.getDate() - 2).padStart(2, "0");
+  var day = String(date.getDate() - 1).padStart(2, "0");
   var month = String(date.getMonth() + 1).padStart(2, "0");
   var year = date.getFullYear();
 
@@ -100,7 +99,8 @@ function serverUnavailable() {
 }
 
 function getRate(from, to) {
-  data = localStorage.getItem(from + "-rate");
+  var date = dateString();
+  data = localStorage.getItem(from);
   data = JSON.parse(data);
-  return data[to];
+  return data[date][to];
 }
