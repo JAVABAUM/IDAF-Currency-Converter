@@ -1,19 +1,26 @@
-For this project we have used code or similar things from following websites:
+Quellenverzeichniss:
 
-HTML and CSS for the Button on the start.html page:
-https://codepen.io/martinboykov/pen/jOrEWBr
+Der Startknopf auf der Seite 'start.html' wurd übernommen von:
+boykov martin,
+https://codepen.io/martinboykov/pen/jOrEWBr,
+Heruntergeladen am 19.08.2021
 
-Data from API:
-https://freecurrencyapi.net/
+Die JavaScript Funktion 'dateString()' wurde übernommen und abgeändert von:
+Meddows Samuel,
+https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript,
+Heruntergeladen am 19.08.2021
 
-JavaScript Day / Month / Year Date:
-https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
+Die Vorlage für unser Logo wurde übernommen und abgeändert von:
+Peepaltreeedu,
+https://commons.wikimedia.org/wiki/File:Peepal_Tree_Logo.png,
+Heruntergeladen am 26.08.2021
 
-Button on start.html:
-https://codepen.io/martinboykov/pen/jOrEWBr
-
-Image used for the logo:
-https://commons.wikimedia.org/wiki/File:Peepal_Tree_Logo.png
-
-Footer template:
+Die Fusszeile wurde übernommen und abgeändert von:
+scanfcode,
 https://codepen.io/scanfcode/pen/MEZPNd
+Heruntergeladen am 26.08.2021
+
+Die Excel-Tabelle 'Zeitplan.xlsx' wurde übernommen und abgeändert von:
+Microsoft,
+https://templates.office.com/de-de/projektzeitachse-mit-meilensteinen-tm00000009
+Heruntergeladen am 09.09.2021

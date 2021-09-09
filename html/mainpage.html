@@ -22,40 +22,6 @@
       <select class="input" name="currencies" onchange="updateValue()"
         onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;' onblur="this.size=0;"
         id="fromcurrency">
-        <option value="AUD">AUD</option>
-        <option value="BGN">BGN</option>
-        <option value="BRL">BRL</option>
-        <option value="CAD">CAD</option>
-        <option value="CHF">CHF</option>
-        <option value="CNY">CNY</option>
-        <option value="CZK">CZK</option>
-        <option value="DKK">DKK</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-        <option value="HKD">HKD</option>
-        <option value="HRK">HRK</option>
-        <option value="HUF">HUF</option>
-        <option value="IDR">IDR</option>
-        <option value="ILS">ILS</option>
-        <option value="INR">INR</option>
-        <option value="ISK">ISK</option>
-        <option value="JPY">JPY</option>
-        <option value="KRW">KRW</option>
-        <option value="MXN">MXN</option>
-        <option value="MYR">MYR</option>
-        <option value="NOK">NOK</option>
-        <option value="NZD">NZD</option>
-        <option value="PHP">PHP</option>
-        <option value="PLN">PLN</option>
-        <option value="RON">RON</option>
-        <option value="RUB">RUB</option>
-        <option value="SEK">SEK</option>
-        <option value="SGD">SGD</option>
-        <option value="THB">THB</option>
-        <option value="TRY">TRY</option>
-        <option value="USD">USD</option>
-        <option value="ZAR">ZAR</option>
-
       </select>
 
       <input type="number" min="0.01" step="0.01" id="amount" class="input" />
@@ -66,39 +32,7 @@
       <select class="input" name="currencies" onchange="updateValue()"
         onmousedown="if(this.options.length>5){this.size=5;}" onchange='this.size=0;' onblur="this.size=0;"
         id="tocurrency">
-        <option value="AUD">AUD</option>
-        <option value="BGN">BGN</option>
-        <option value="BRL">BRL</option>
-        <option value="CAD">CAD</option>
-        <option value="CHF">CHF</option>
-        <option value="CNY">CNY</option>
-        <option value="CZK">CZK</option>
-        <option value="DKK">DKK</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-        <option value="HKD">HKD</option>
-        <option value="HRK">HRK</option>
-        <option value="HUF">HUF</option>
-        <option value="IDR">IDR</option>
-        <option value="ILS">ILS</option>
-        <option value="INR">INR</option>
-        <option value="ISK">ISK</option>
-        <option value="JPY">JPY</option>
-        <option value="KRW">KRW</option>
-        <option value="MXN">MXN</option>
-        <option value="MYR">MYR</option>
-        <option value="NOK">NOK</option>
-        <option value="NZD">NZD</option>
-        <option value="PHP">PHP</option>
-        <option value="PLN">PLN</option>
-        <option value="RON">RON</option>
-        <option value="RUB">RUB</option>
-        <option value="SEK">SEK</option>
-        <option value="SGD">SGD</option>
-        <option value="THB">THB</option>
-        <option value="TRY">TRY</option>
-        <option value="USD">USD</option>
-        <option value="ZAR">ZAR</option>
+
       </select>
 
       <br>
@@ -107,7 +41,6 @@
       <h2 id="result">is</h2>
     </form>
     <br>
-    <!--<button id="submitButton">Calculate</button>-->
 
     <h2 class="result" id="rate"></h2>
     <h2 class="errors" id="errors"></h2>
@@ -125,14 +58,26 @@
       var fromcurrency = $("#fromcurrency").val();
       var tocurrency = $("#tocurrency").val();
 
-      if (amount == "" || fromcurrency == "" || tocurrency == "" || tocurrency == fromcurrency) {
-        $("#errors").text("Please enter correct data");
+      if (amount == "" || fromcurrency == "" || tocurrency == "") {
+        $("#errors").text("Bitte geben Sie gültige Daten ein");
       } else {
         var result = convertCurrency(fromcurrency, tocurrency, amount);
       }
     }
 
-    $(document).ready(function () { })
+    $(document).ready(function () {
+      getKeys();
+      var keys = localStorage.getItem("keys");
+      keys = JSON.parse(keys);
+      keys = keys.sort();
+        $.each(keys, function (index, value) {
+          $("#fromcurrency").append(`
+        <option value="${value}">${value}</option>
+      `); $("#tocurrency").append(`
+        <option value="${value}">${value}</option>
+      `);
+        })
+    });
   </script>
 
   <!-- Site footer https://codepen.io/scanfcode/pen/MEZPNd-->

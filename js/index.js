@@ -104,3 +104,21 @@ function getRate(from, to) {
   data = JSON.parse(data);
   return data[date][to];
 }
+
+function getKeys() {
+  var apiKey = getApi();
+  var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=CHF&${apiKey}`;
+  var request = new XMLHttpRequest();
+  request.open("GET", url, true);
+
+  request.onload = function () {
+    if (request.status >= 200 && request.status < 400) {
+      var data = JSON.parse(this.response);
+      var date = dateString();
+      var keys = data.data[date];
+      keys = Object.keys(keys);
+      localStorage.setItem("keys", JSON.stringify(keys));
+    }
+  };
+  request.send();
+}
