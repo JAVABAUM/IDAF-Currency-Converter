@@ -92,3 +92,18 @@ h1 {
   width: "550px";
    height: "550px"
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7a18ec; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a18ec; 
+}
