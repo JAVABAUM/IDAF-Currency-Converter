@@ -29,12 +29,21 @@ function convertCurrency(from, to, amount) {
           " CHF"
         );
         $("#rate").text(
+<<<<<<< Updated upstream
           "The conversion rate from " +
           from +
           " to " +
           to +
           " is: " +
           getRate(from, to)
+=======
+          "The exchange rate from " +
+            from +
+            " to " +
+            to +
+            " is: " +
+            getRate(from, to)
+>>>>>>> Stashed changes
         );
         $("#errors").text("");
         return result;
@@ -66,12 +75,21 @@ function convertCurrency(from, to, amount) {
       " CHF"
     );
     $("#rate").text(
+<<<<<<< Updated upstream
       "The conversion rate from " +
       from +
       " to " +
       to +
       " is: " +
       getRate(from, to)
+=======
+      "The exchange rate from " +
+        from +
+        " to " +
+        to +
+        " is: " +
+        getRate(from, to)
+>>>>>>> Stashed changes
     );
     $("#errors").text("");
     return result;
@@ -110,14 +128,25 @@ function getKeys() {
   var url = `https://freecurrencyapi.net/api/v1/rates?base_currency=CHF&${apiKey}`;
   var request = new XMLHttpRequest();
   request.open("GET", url, true);
-
   request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
       var data = JSON.parse(this.response);
       var date = dateString();
       var keys = data.data[date];
       keys = Object.keys(keys);
+      keys = keys.sort();
+      $.each(keys, function (index, value) {
+        $("#fromcurrency").append(`
+        <option value="${value}">${value}</option>
+      `);
+        $("#tocurrency").append(`
+        <option value="${value}">${value}</option>
+      `);
+      });
       localStorage.setItem("keys", JSON.stringify(keys));
+    } else {
+      console.error("Something went wrong. status:  " + request.status);
+      serverUnavailable();
     }
   };
   request.send();
