@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="../css/stylesmainpage.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-  <script src="../js/index.js"></script>
+  <!--<script src="../js/index.js"></script>-->
+  <script src="../js/currencies.js"></script>
   <script src="../js/api.js"></script>
 </head>
 
@@ -66,17 +67,7 @@
     }
 
     $(document).ready(function () {
-      getKeys();
-      var keys = localStorage.getItem("keys");
-      keys = JSON.parse(keys);
-      keys = keys.sort();
-        $.each(keys, function (index, value) {
-          $("#fromcurrency").append(`
-        <option value="${value}">${value}</option>
-      `); $("#tocurrency").append(`
-        <option value="${value}">${value}</option>
-      `);
-        })
+      getKeys();      
     });
   </script>
 
@@ -85,8 +76,7 @@
     <div class="">
       <h6>About</h6>
       <p class="text-justify">With our currency converter you can easily convert amounts between many different
-        currencies. <br> The four of us wrote this little web application as a pre-project for our IDPA. ??? hey
-        guys lol it's me
+        currencies. <br> The four of us wrote this little web application as a pre-project for our IDPA.
       </p>
     </div>
 
@@ -103,9 +93,8 @@
 
 
     <div>
-      <h6>Help</h6>
       <ul class="footer-links">
-        <li><a href="mailto:javabaumappdev@gmail.com?subject=Currency Converter help">Contact</a></li>
+        <li><a href="mailto:javabaumappdev@gmail.com?subject=Currency Converter help">Help</a></li>
       </ul>
     </div>
     <div class="logo-container">
