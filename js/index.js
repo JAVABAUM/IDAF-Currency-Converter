@@ -29,21 +29,12 @@ function convertCurrency(from, to, amount) {
           " CHF"
         );
         $("#rate").text(
-<<<<<<< Updated upstream
-          "The conversion rate from " +
-          from +
-          " to " +
-          to +
-          " is: " +
-          getRate(from, to)
-=======
           "The exchange rate from " +
             from +
             " to " +
             to +
             " is: " +
             getRate(from, to)
->>>>>>> Stashed changes
         );
         $("#errors").text("");
         return result;
@@ -75,21 +66,12 @@ function convertCurrency(from, to, amount) {
       " CHF"
     );
     $("#rate").text(
-<<<<<<< Updated upstream
       "The conversion rate from " +
       from +
       " to " +
       to +
       " is: " +
       getRate(from, to)
-=======
-      "The exchange rate from " +
-        from +
-        " to " +
-        to +
-        " is: " +
-        getRate(from, to)
->>>>>>> Stashed changes
     );
     $("#errors").text("");
     return result;
