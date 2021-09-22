@@ -18,23 +18,23 @@ function convertCurrency(from, to, amount) {
 
         $("#result").text(
           amount +
-            " " +
-            from +
-            " are " +
-            result +
-            " " +
-            to +
-            " and " +
-            resultchf +
-            " CHF"
+          " " +
+          from +
+          " are " +
+          result +
+          " " +
+          to +
+          " and " +
+          resultchf +
+          " CHF"
         );
         $("#rate").text(
           "The conversion rate from " +
-            from +
-            " to " +
-            to +
-            " is: " +
-            getRate(from, to)
+          from +
+          " to " +
+          to +
+          " is: " +
+          getRate(from, to)
         );
         $("#errors").text("");
         return result;
@@ -55,23 +55,23 @@ function convertCurrency(from, to, amount) {
 
     $("#result").text(
       amount +
-        " " +
-        from +
-        " are " +
-        result +
-        " " +
-        to +
-        " and " +
-        resultchf +
-        " CHF"
+      " " +
+      from +
+      " are " +
+      result +
+      " " +
+      to +
+      " and " +
+      resultchf +
+      " CHF"
     );
     $("#rate").text(
       "The conversion rate from " +
-        from +
-        " to " +
-        to +
-        " is: " +
-        getRate(from, to)
+      from +
+      " to " +
+      to +
+      " is: " +
+      getRate(from, to)
     );
     $("#errors").text("");
     return result;
