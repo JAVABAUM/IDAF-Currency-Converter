@@ -33,6 +33,7 @@ select {
   background-color: black;
   color: white;
 }
+
 input {
   border: 1px solid white;
   background-color: black;
@@ -43,7 +44,7 @@ input {
   border-radius: 4px;
 }
 
-.errors{
+.errors {
   color: red;
   margin-top: 1%;
 }
@@ -70,13 +71,16 @@ button {
   color: #737373;
   margin-top: 13%;
 }
+
 .site-footer hr {
   border-top-color: #bbb;
   opacity: 0.5;
 }
+
 .site-footer hr.small {
   margin: 20px 0;
 }
+
 .site-footer h6 {
   color: #fff;
   font-size: 16px;
@@ -84,49 +88,57 @@ button {
   margin-top: 5px;
   letter-spacing: 2px;
 }
+
 .site-footer a {
   color: #737373;
 }
+
 .site-footer a:hover {
   color: #3366cc;
   text-decoration: none;
 }
+
 .footer-links {
   padding-left: 0;
   list-style: none;
+  display: inline-block;
 }
+
 .footer-links li {
   display: block;
 }
+
 .footer-links a {
   color: #737373;
 }
-.footer-links a:active,
-.footer-links a:focus,
-.footer-links a:hover {
+
+.footer-links a:active, .footer-links a:focus, .footer-links a:hover {
   color: #3366cc;
   text-decoration: none;
 }
+
 .footer-links.inline li {
   display: inline-block;
 }
+
 .copyright-text {
   margin: 0;
 }
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000; 
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7a18ec; 
+  background: #7a18ec;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7a18ec; 
+  background: #7a18ec;
 }
 
 #javaBaumMain {
