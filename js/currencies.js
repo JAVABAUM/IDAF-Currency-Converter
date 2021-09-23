@@ -60,24 +60,24 @@ function convertCurrency(from, to, amount) {
 
         $("#result").text(
           amount +
-            " " +
-            from +
-            " sind " +
-            result +
-            " " +
-            to +
-            " und " +
-            resultchf +
-            " CHF"
+          " " +
+          from +
+          " sind " +
+          result +
+          " " +
+          to +
+          " und " +
+          resultchf +
+          " CHF"
         );
 
         $("#rate").text(
           " Der Umrechnungskurs zwischen" +
-            from +
-            " und " +
-            to +
-            " beträgt: " +
-            getRate(from, to)
+          from +
+          " und " +
+          to +
+          " beträgt: " +
+          getRate(from, to)
         );
       } else {
         console.error("Something went wrong. status:  " + request.status);
@@ -93,24 +93,24 @@ function convertCurrency(from, to, amount) {
     resultchf = resultchf.toFixed(4);
     $("#result").text(
       amount +
-        " " +
-        from +
-        " sind " +
-        result +
-        " " +
-        to +
-        " und " +
-        resultchf +
-        " CHF"
+      " " +
+      from +
+      " sind " +
+      result +
+      " " +
+      to +
+      " und " +
+      resultchf +
+      " CHF"
     );
 
     $("#rate").text(
       " Der Umrechnungskurs zwischen " +
-        from +
-        " und " +
-        to +
-        " beträgt: " +
-        getRate(from, to)
+      from +
+      " und " +
+      to +
+      " beträgt: " +
+      getRate(from, to)
     );
   }
 }

@@ -43,17 +43,20 @@ a {
   transition: var(--speed-normal);
   border: 1px solid var(--color-red);
 }
+
 a:hover {
   border: 1px solid transparent;
   background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
   transition-delay: 0.8s;
   background-size: 180px;
   -webkit-animation: animate var(--speed-fast) steps(8) forwards;
-          animation: animate var(--speed-fast) steps(8) forwards;
+  animation: animate var(--speed-fast) steps(8) forwards;
 }
+
 a:last-of-type {
   border: 1px solid var(--color-purple);
 }
+
 a:last-of-type:hover {
   background: var(--color-purple) url(https://i.postimg.cc/FzBWFtKM/pixel2.png);
 }
@@ -77,33 +80,35 @@ a:last-of-type:hover {
 }
 
 h1 {
-    color: white;
-    font-size: 65px;
+  color: white;
+  font-size: 65px;
 }
-#emoji{ 
+
+#emoji {
   font-size: 100px;
 }
-#javaBaum{
 
+#javaBaum {
   position: absolute;
   top: 5%;
   left: auto;
   z-index: -1;
   width: "550px";
-   height: "550px"
+  height: "550px"
 }
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000; 
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7a18ec; 
+  background: #7a18ec;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7a18ec; 
+  background: #7a18ec;
 }

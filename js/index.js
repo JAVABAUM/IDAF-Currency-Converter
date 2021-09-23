@@ -30,11 +30,11 @@ function convertCurrency(from, to, amount) {
         );
         $("#rate").text(
           "Der Umrechnungskurs zwischen " +
-            from +
-            " und " +
-            to +
-            " beträgt: " +
-            getRate(from, to)
+          from +
+          " und " +
+          to +
+          " beträgt: " +
+          getRate(from, to)
         );
         $("#errors").text("");
         return result;
