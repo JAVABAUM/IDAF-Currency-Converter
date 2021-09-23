@@ -62,21 +62,21 @@ function convertCurrency(from, to, amount) {
           amount +
             " " +
             from +
-            " are " +
+            " ist " +
             result +
             " " +
             to +
-            " and " +
+            " und " +
             resultchf +
             " CHF"
         );
 
         $("#rate").text(
-          "The exchange rate from " +
+          " Der Umrechnungskurs beträgt " +
             from +
-            " to " +
+            " zu " +
             to +
-            " is: " +
+            " ist: " +
             getRate(from, to)
         );
       } else {
@@ -95,21 +95,21 @@ function convertCurrency(from, to, amount) {
       amount +
         " " +
         from +
-        " are " +
+        " ist " +
         result +
         " " +
         to +
-        " and " +
+        " und " +
         resultchf +
         " CHF"
     );
 
     $("#rate").text(
-      "The exchange rate from " +
+      " Der Umrechnungskurs beträgt " +
         from +
-        " to " +
+        " zu " +
         to +
-        " is: " +
+        " ist: " +
         getRate(from, to)
     );
   }
