@@ -72,7 +72,7 @@ function convertCurrency(from, to, amount) {
         );
 
         $("#rate").text(
-          " Der Umrechnungskurs zwischen" +
+          " Der Umrechnungskurs zwischen " +
           from +
           " und " +
           to +
