@@ -62,7 +62,7 @@ function convertCurrency(from, to, amount) {
           amount +
             " " +
             from +
-            " ist " +
+            " sind " +
             result +
             " " +
             to +
@@ -72,11 +72,11 @@ function convertCurrency(from, to, amount) {
         );
 
         $("#rate").text(
-          " Der Umrechnungskurs beträgt " +
+          " Der Umrechnungskurs zwischen" +
             from +
-            " zu " +
+            " und " +
             to +
-            " ist: " +
+            " beträgt: " +
             getRate(from, to)
         );
       } else {
@@ -95,7 +95,7 @@ function convertCurrency(from, to, amount) {
       amount +
         " " +
         from +
-        " ist " +
+        " sind " +
         result +
         " " +
         to +
@@ -105,11 +105,11 @@ function convertCurrency(from, to, amount) {
     );
 
     $("#rate").text(
-      " Der Umrechnungskurs beträgt " +
+      " Der Umrechnungskurs zwischen " +
         from +
-        " zu " +
+        " und " +
         to +
-        " ist: " +
+        " beträgt: " +
         getRate(from, to)
     );
   }

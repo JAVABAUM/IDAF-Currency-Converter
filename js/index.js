@@ -29,11 +29,11 @@ function convertCurrency(from, to, amount) {
           " CHF"
         );
         $("#rate").text(
-          "The exchange rate from " +
+          "Der Umrechnungskurs zwischen " +
             from +
-            " to " +
+            " und " +
             to +
-            " is: " +
+            " beträgt: " +
             getRate(from, to)
         );
         $("#errors").text("");
@@ -57,7 +57,7 @@ function convertCurrency(from, to, amount) {
       amount +
       " " +
       from +
-      " ist " +
+      " sind " +
       result +
       " " +
       to +
@@ -66,11 +66,11 @@ function convertCurrency(from, to, amount) {
       " CHF"
     );
     $("#rate").text(
-      " Der Umrechnungskurs beträgt " +
+      " Der Umrechnungskurs zwischen " +
       from +
-      " zu " +
+      " und " +
       to +
-      " ist: " +
+      " beträgt: " +
       getRate(from, to)
     );
     $("#errors").text("");
